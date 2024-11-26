@@ -1,7 +1,13 @@
-package gigi.com.job_application.Job.reviews;
+package gigi.com.job_application.Job.reviews.Impl;
+
+import gigi.com.job_application.Job.reviews.Review;
+import gigi.com.job_application.Job.reviews.ReviewRepository;
+import gigi.com.job_application.Job.reviews.ReviewService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ReviewServiceImpl implements ReviewService {
 
     private ReviewRepository reviewRepository;

@@ -1,14 +1,11 @@
-package gigi.com.job_application.Job.impl;
+package gigi.com.job_application.Job.Job.impl;
 
-import gigi.com.job_application.Job.Job;
-import gigi.com.job_application.Job.JobRepository;
-import gigi.com.job_application.Job.JobService;
-import org.springframework.http.ResponseEntity;
+import gigi.com.job_application.Job.Job.Job;
+import gigi.com.job_application.Job.Job.JobRepository;
+import gigi.com.job_application.Job.Job.JobService;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 

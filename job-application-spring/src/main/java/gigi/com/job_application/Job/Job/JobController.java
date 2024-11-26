@@ -1,12 +1,9 @@
-package gigi.com.job_application.Job;
+package gigi.com.job_application.Job.Job;
 
-import gigi.com.job_application.Job.impl.JobServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @RestController

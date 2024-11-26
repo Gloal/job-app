@@ -1,6 +1,7 @@
-package gigi.com.job_application.Job;
+package gigi.com.job_application.Job.Job;
 
 import jakarta.persistence.*;
+import gigi.com.job_application.Job.company.Company;
 
 @Entity
 //@Table(name="job_table")
@@ -13,6 +14,10 @@ public class Job {
     private String maxSalary;
     private String minSalary;
     private String location;
+    //    @ManyToOne
+    //private Company company;
+
+
 
     //you need a default no-args constructor when using JPA as it needs a way to create an entity
     //JPA needs to create instances of the entity when retrieving from the database and it uses reflection
@@ -62,6 +67,7 @@ Best Practices for the No-Args Constructor
         this.maxSalary = maxSalary;
         this.minSalary = minSalary;
         this.location = location;
+        //this.company = company;
     }
 
     public Long getId() {
