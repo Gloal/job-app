@@ -1,5 +1,6 @@
 package gigi.com.job_application.Job.Job;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import gigi.com.job_application.Job.company.Company;
 
@@ -14,9 +15,10 @@ public class Job {
     private String maxSalary;
     private String minSalary;
     private String location;
-    //    @ManyToOne
-    //private Company company;
 
+    @ManyToOne
+    @JsonManagedReference
+    private Company company;
 
 
     //you need a default no-args constructor when using JPA as it needs a way to create an entity
@@ -60,14 +62,14 @@ Best Practices for the No-Args Constructor
     protected Job(){}
 
 
-    public Job(Long id, String title, String description, String maxSalary, String minSalary, String location) {
+    public Job(Long id, String title, String description, String maxSalary, String minSalary, String location, Company company) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.maxSalary = maxSalary;
         this.minSalary = minSalary;
         this.location = location;
-        //this.company = company;
+        this.company = company;
     }
 
     public Long getId() {
