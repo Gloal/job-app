@@ -1,5 +1,6 @@
 package gigi.com.job_application.Job.Job;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import gigi.com.job_application.Job.company.Company;
@@ -16,8 +17,7 @@ public class Job {
     private String minSalary;
     private String location;
 
-    @ManyToOne
-    @JsonManagedReference
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Company company;
 
 
@@ -59,7 +59,7 @@ Best Practices for the No-Args Constructor
     Make it protected (Preferred):
         You don’t need to expose the no-args constructor as public. Instead, make it protected to restrict its visibility while still allowing JPA to use it.
     * */
-    protected Job(){}
+    public Job(){}
 
 
     public Job(Long id, String title, String description, String maxSalary, String minSalary, String location, Company company) {
@@ -118,5 +118,13 @@ Best Practices for the No-Args Constructor
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public Company getCompany(Company company){
+        return this.company;
     }
 }

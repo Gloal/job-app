@@ -3,6 +3,8 @@ package gigi.com.job_application.Job.Job.impl;
 import gigi.com.job_application.Job.Job.Job;
 import gigi.com.job_application.Job.Job.JobRepository;
 import gigi.com.job_application.Job.Job.JobService;
+import gigi.com.job_application.Job.company.Company;
+import gigi.com.job_application.Job.company.CompanyRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,9 +15,11 @@ import java.util.Optional;
 public class JobServiceImpl implements JobService {
 
     private JobRepository jobRepository;
+    private CompanyRepository companyRepository;
 
-    public JobServiceImpl(JobRepository jobRepository){
+    public JobServiceImpl(JobRepository jobRepository, CompanyRepository companyRepository){
         this.jobRepository = jobRepository;
+        this.companyRepository = companyRepository;
     }
 
     private List<Job> jobs = new ArrayList<>();
@@ -29,6 +33,15 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public void createNewJob(Job job) {
+//        Company company = companyRepository.findById(companyId)
+//                        .orElseThrow(() -> new RuntimeException("Company not found"));
+//        Job newJob = new Job();
+//        newJob.setTitle("Developer");
+//        newJob.setDescription("Write code");
+//        newJob.setMaxSalary("900000");
+//        newJob.setMinSalary("90000");
+//        newJob.setLocation("Toronto");
+//        newJob.setCompany(company); // Set the company
         jobRepository.save(job);
     }
 

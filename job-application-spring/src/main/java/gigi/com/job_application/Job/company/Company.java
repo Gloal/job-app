@@ -1,11 +1,11 @@
 package gigi.com.job_application.Job.company;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import gigi.com.job_application.Job.Job.Job;
 import gigi.com.job_application.Job.reviews.Review;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,7 +18,6 @@ public class Company {
     @OneToMany
     private List<Review> reviews;
     @OneToMany(mappedBy = "company")
-    @JsonBackReference
     private List<Job> jobs;
 
     public Long getId() {
@@ -52,11 +51,9 @@ public class Company {
     public Company(String name, String address) {
         this.name = name;
         this.address = address;
-        this.reviews = new ArrayList<>();
-        this.jobs = new ArrayList<>();
+        //this.reviews = new ArrayList<>();
+        //this.jobs = new ArrayList<>();
     }
 
-    protected Company(){}
-
-
+    public Company(){}
 }
