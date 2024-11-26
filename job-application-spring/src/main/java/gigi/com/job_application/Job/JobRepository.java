@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public class JobRepository extends JpaRepository<Job, UUID> {
+public interface JobRepository extends JpaRepository<Job, Long> {
 }
