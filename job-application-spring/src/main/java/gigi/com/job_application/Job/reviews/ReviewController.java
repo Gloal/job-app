@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/apis/companies/{companyID}")
+@RequestMapping("/v1/apis/companies/{companyId}")
 public class ReviewController {
 
     private final ReviewService reviewService;
@@ -30,7 +30,7 @@ public class ReviewController {
             return new ResponseEntity<>("Review added successfully", HttpStatus.CREATED);
     }
 
-    @GetMapping("/reviews/{reviewId")
+    @GetMapping("/reviews/{reviewId}")
     public ResponseEntity<Review> getReviewById(@PathVariable Long companyId, @PathVariable Long reviewId){
         Review review =  reviewService.getReviewById(companyId, reviewId);
         if(review != null){
@@ -39,7 +39,7 @@ public class ReviewController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("/reviews/{reviewId")
+    @PutMapping("/reviews/{reviewId}")
     public ResponseEntity<String> updateReview(@PathVariable Long companyId,
                                                @PathVariable Long reviewId,
                                                @RequestBody Review review){
