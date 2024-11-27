@@ -1,4 +1,4 @@
-package gigi.com.job_application.Job.Job;
+package gigi.com.job_application.Job;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

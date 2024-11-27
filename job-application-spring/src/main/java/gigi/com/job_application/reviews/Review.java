@@ -1,10 +1,9 @@
-package gigi.com.job_application.Job.reviews;
+package gigi.com.job_application.reviews;
 
-import gigi.com.job_application.Job.company.Company;
+import gigi.com.job_application.company.Company;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 public class Review {
@@ -21,7 +20,8 @@ public class Review {
     int score;
 
 
-    protected Review(){}
+    protected Review() {
+    }
 
     public Long getId() {
         return id;

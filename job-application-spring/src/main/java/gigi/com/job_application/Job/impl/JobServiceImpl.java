@@ -1,10 +1,9 @@
-package gigi.com.job_application.Job.Job.impl;
+package gigi.com.job_application.Job.impl;
 
-import gigi.com.job_application.Job.Job.Job;
-import gigi.com.job_application.Job.Job.JobRepository;
-import gigi.com.job_application.Job.Job.JobService;
-import gigi.com.job_application.Job.company.Company;
-import gigi.com.job_application.Job.company.CompanyRepository;
+import gigi.com.job_application.Job.JobRepository;
+import gigi.com.job_application.Job.JobService;
+import gigi.com.job_application.Job.Job;
+import gigi.com.job_application.company.CompanyRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

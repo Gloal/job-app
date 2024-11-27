@@ -1,4 +1,4 @@
-package gigi.com.job_application.Job.reviews;
+package gigi.com.job_application.reviews;
 
 import org.springframework.data.repository.CrudRepository;
 

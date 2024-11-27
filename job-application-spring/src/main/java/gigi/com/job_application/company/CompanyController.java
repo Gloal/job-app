@@ -1,7 +1,7 @@
-package gigi.com.job_application.Job.company;
+package gigi.com.job_application.company;
 
-import gigi.com.job_application.Job.company.impl.CompanyServiceImpl;
-import gigi.com.job_application.Job.reviews.Review;
+import gigi.com.job_application.company.impl.CompanyServiceImpl;
+import gigi.com.job_application.reviews.Review;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

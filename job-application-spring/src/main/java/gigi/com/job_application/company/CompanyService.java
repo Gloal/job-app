@@ -1,6 +1,6 @@
-package gigi.com.job_application.Job.company;
+package gigi.com.job_application.company;
 
-import gigi.com.job_application.Job.reviews.Review;
+import gigi.com.job_application.reviews.Review;
 
 import java.util.List;
 

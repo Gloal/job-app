@@ -1,10 +1,7 @@
-package gigi.com.job_application.Job.company;
+package gigi.com.job_application.company;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import gigi.com.job_application.Job.Job.Job;
-import gigi.com.job_application.Job.reviews.Review;
+import gigi.com.job_application.Job.Job;
+import gigi.com.job_application.reviews.Review;
 import jakarta.persistence.*;
 
 import java.util.List;

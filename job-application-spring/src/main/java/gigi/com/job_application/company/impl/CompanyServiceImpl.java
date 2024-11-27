@@ -1,9 +1,9 @@
-package gigi.com.job_application.Job.company.impl;
+package gigi.com.job_application.company.impl;
 
-import gigi.com.job_application.Job.company.Company;
-import gigi.com.job_application.Job.company.CompanyRepository;
-import gigi.com.job_application.Job.company.CompanyService;
-import gigi.com.job_application.Job.reviews.Review;
+import gigi.com.job_application.company.Company;
+import gigi.com.job_application.company.CompanyRepository;
+import gigi.com.job_application.company.CompanyService;
+import gigi.com.job_application.reviews.Review;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

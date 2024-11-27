@@ -1,4 +1,4 @@
-package gigi.com.job_application.Job.Job;
+package gigi.com.job_application.Job;
 
 import java.util.List;
 

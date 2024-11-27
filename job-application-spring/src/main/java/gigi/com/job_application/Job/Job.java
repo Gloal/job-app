@@ -1,9 +1,7 @@
-package gigi.com.job_application.Job.Job;
+package gigi.com.job_application.Job;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import gigi.com.job_application.Job.company.Company;
+import gigi.com.job_application.company.Company;
 
 @Entity
 //@Table(name="job_table")

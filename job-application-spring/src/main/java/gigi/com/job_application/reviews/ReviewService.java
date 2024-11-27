@@ -1,8 +1,8 @@
-package gigi.com.job_application.Job.reviews;
+package gigi.com.job_application.reviews;
 
 import java.util.List;
 
-public interface ReviewService{
+public interface ReviewService {
 
     Review getReviewById(Long companyId, Long reviewId);
 
