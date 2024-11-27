@@ -23,11 +23,20 @@ public class CompanyServiceImpl implements CompanyService {
         this.companyRepository.save(company);
     }
 
+//    @Override
+//    public boolean deleteCompanyById(Long id) {
+//        Optional<Company> companyToDelete = companyRepository.findById(id);
+//        if (companyToDelete.isPresent()) {
+//            companyRepository.delete(companyToDelete.get());
+//            return true;
+//        }
+//        return false;
+//    }
+
     @Override
     public boolean deleteCompanyById(Long id) {
-        Optional<Company> companyToDelete = companyRepository.findById(id);
-        if (companyToDelete.isPresent()) {
-            companyRepository.delete(companyToDelete.get());
+        if (companyRepository.existsById(id)){
+            companyRepository.deleteById(id);
             return true;
         }
         return false;

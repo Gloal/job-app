@@ -17,7 +17,7 @@ public class Job {
     private String minSalary;
     private String location;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Company company;
 
 
@@ -61,6 +61,10 @@ Best Practices for the No-Args Constructor
     * */
     public Job(){}
 
+
+    public Company getCompany() {
+        return company;
+    }
 
     public Job(Long id, String title, String description, String maxSalary, String minSalary, String location, Company company) {
         this.id = id;
