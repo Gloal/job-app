@@ -6,12 +6,11 @@ public interface ReviewService{
 
     Review getReviewById(Long companyId, Long reviewId);
 
-    List<Review> getAllCompanyReviews(Long companyId);
+    List<Review> getAllReviewsForCompany(Long companyId);
 
-    void createReview(Review review);
+    void saveNewReview(Long companyId, Review review);
 
     boolean deleteReview(Long reviewId);
 
-    boolean updateReview(Long reviewId, Review review);
-
+    boolean updateReview(Long companyId, Long reviewId, Review updatedReview);
 }
